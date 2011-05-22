@@ -1,0 +1,7 @@
+				   wincurses
+		     An ncurses implementation for Windows
+
+This project provides some minimal functionality for ncurses calls from Windows.
+Take a look at wincurses.h to see which functions are implemented.
+
+Project web site: <http://github.com/justinmeza/wincurses>.
