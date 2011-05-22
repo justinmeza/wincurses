@@ -1,5 +1,6 @@
 				   wincurses
-		     An ncurses implementation for Windows
+	       (An ncurses implementation for Windows terminals)
+				 Justin J. Meza
 
 This project provides some minimal functionality for ncurses calls from Windows.
 Take a look at wincurses.h to see which functions are implemented.
