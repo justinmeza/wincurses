@@ -284,7 +284,7 @@ int mvaddch(int y, int x, const chtype ch)
 
 int mvwaddch(WINDOW *win, int y, int x, const chtype ch)
 {
-	if(wmove(win,y, x)==ERR)
+	if (wmove(win, y, x) == ERR)
 		return ERR;
 	return waddch(win, ch);
 }
