@@ -22,7 +22,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-#define EOF -1
 #define ERR 0
 #define FALSE 0
 #define OK 1
@@ -38,8 +37,9 @@
 #define COLOR_BITS 6     /* Must be a multiple of two */
 #define MAX_NUM_PAIRS 64 /* Should be 2^COLOR_BITS and ideally NUM_COLORS^2. */
 
+#ifndef __cplusplus
 typedef int bool;
-
+#endif
 
 /* Background character (fills the screen when cleared) */
 #define WC_BGND ' '
@@ -131,9 +131,6 @@ typedef enum attr {
 	A_UNDERLINE  = (1 << _A_UNDERLINE),
 } attr_t;
 
-
-/* Boolean type */
-typedef int bool;
 
 /* Color codes */
 typedef enum colorcode {
