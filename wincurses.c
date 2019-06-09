@@ -792,7 +792,7 @@ int wgetch(WINDOW *win)
 		/* If we're in 'nodelay' mode and we have no input, */
 		if (win->flags & WC_NODELAY && !kbhit()) return ERR;
 
-		ReadConsoleInput(hstdin, &c, 1, &len);
+		ReadConsoleInput(hstdin, &c, 1, (LPDWORD)&len);
 	/* Wait until we have a key down event */
 	} while (c.EventType != KEY_EVENT || !c.Event.KeyEvent.bKeyDown);
 
