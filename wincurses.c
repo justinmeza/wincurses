@@ -1679,7 +1679,7 @@ int va_wprintw(WINDOW *win, char *fmt, va_list *args)
 	s = malloc(sizeof(char) * stdscr->size.Y * stdscr->size.X);
 
 	/* Save our formatted string into a temporary location in a safe way */
-	if (vsprintf_s(s, stdscr->size.Y * stdscr->size.X, fmt, *args) < 0)
+	if (vsprintf(s, fmt, *args) < 0)
 		return ERR;
 
 	/* Print our formatted string */
